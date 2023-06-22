@@ -37,4 +37,33 @@ public static void ShowWelcomeView()
 
     inputScanner.close();
     }
+    private static void ShowAddUser() {
+        Scanner inputScanner = new Scanner(System.in);
+        System.out.println("=======================");
+        System.out.println("userid: ");
+        String sUserid = inputScanner.nextLine();
+        System.out.println("password: ");
+        String sPassword = inputScanner.nextLine();
+
+        UserUsecase userUsecase = new UserUsecase();
+        userUsecase.AddUser(sUserid, sPassword);
+
+        ShowUserMain();
+        inputScanner.close();
+    }
+    private static void ShowChangePassword() {
+        Scanner inputScanner = new Scanner(System.in);
+        System.out.println("=======================");
+        System.out.println("userid: ");
+        String sUserid = inputScanner.nextLine();
+        System.out.println("password: ");
+        String sPassword = inputScanner.nextLine();
+        
+        UserUsecase userUsecase = new UserUsecase();
+        userUsecase.AddUser(sUserid, sPassword);
+
+        ShowUserMain();
+        inputScanner.close();
+    }
+
 }
